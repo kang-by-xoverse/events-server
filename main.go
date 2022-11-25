@@ -9,7 +9,7 @@ func main() {
 	utils.LoadDotEnv()
 	rdb, close := utils.GetRedisClient()
 
-	go tcp.CreateEventsServer(rdb)
+	tcp.CreateEventsServer(rdb)
 
 	close()
 }
